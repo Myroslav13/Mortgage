@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url(assets/fonts/static/PlusJakartaSans-Medium.ttf);
+}
+
+body {
+    background-color: #e3f4fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;   
+    height: 100vh;
+    font-family: 'PlusJakartaSans';
+}
+
+.main-block {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.main-side {
+    padding: 20px;
+}
+
+.results-side {
+    background-color: #133040;
+    color: white;
+    border-radius: 0 15px 15px 50px;
+    padding: 20px;
+}
+
+.main-side p {
+    color: gray;
+}
+
+.results-side img {
+    display: block;
+    margin: 0 auto;
+}
+
+.main-side-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+button {
+    background-color: #d9db2f;
+    color: #102b3e;
+    border: none;
+    border-radius: 20px;
+}
