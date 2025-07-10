@@ -21,26 +21,26 @@
                     </div>
 
                     <form>
-                        <label for="mortgage-amount">Mortgage Amount</label>
+                        <label for="input-mortgage-amount">Mortgage Amount</label>
 
-                        <div class="input-container">
-                            <input type="text" id="mortgage-amount" class="custom-input">
+                        <div class="input-container" id="container-mortgage-amount">
+                            <input type="text" id="input-mortgage-amount" class="custom-input">
                         </div>
 
                         <div class="mortgage-data">
                             <div>
-                                <label for="mortgage-term">Mortgage Term</label>
+                                <label for="input-mortgage-term">Mortgage Term</label>
 
-                                <div class="input-container-term">
-                                    <input type="text" id="mortgage-term" class="custom-input-term">
+                                <div class="container-mortgage-term" id="container-mortgage-term">
+                                    <input type="text" id="input-mortgage-term" class="custom-input-term">
                                 </div>
                             </div>
                             
                             <div>
-                                <label for="interest-rate">Interest Rate</label>
+                                <label for="input-interest-rate">Interest Rate</label>
                                 
-                                <div class="input-container-rate">
-                                    <input type="text" id="interest-rate" class="custom-input-rate">
+                                <div class="container-interest-rate" id="container-interest-rate">
+                                    <input type="text" id="input-interest-rate" class="custom-input-rate">
                                 </div>
                             </div>
                         </div>
@@ -48,40 +48,32 @@
                         <div>
                             <label>Mortgage Type</label>
                             
-                            <div class="radio-container">
-                                <input type="radio" id="repayment" name="mortgage-type" value="repayment">
-                                <label for="repayment"><b>Repayment</b></label>
+                            <div class="radio-container" id="radio-container-1">
+                                <input type="radio" id="radio-repayment" name="mortgage-type" value="repayment">
+                                <label for="radio-repayment"><b>Repayment</b></label>
                             </div>
 
-                            <div class="radio-container">
-                                <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
-                                <label for="interest-only"><b>Interest Only</b></label>
+                            <div class="radio-container" id="radio-container-2">
+                                <input type="radio" id="radio-interest-only" name="mortgage-type" value="interest-only">
+                                <label for="radio-interest-only"><b>Interest Only</b></label>
                             </div>
                         </div>
 
                         <br>
-                        <button><img src="assets/images/icon-calculator.svg"><b>Calculate Repayments</b></button>
+                        <button id="button-submit"><img src="assets/images/icon-calculator.svg"><b>Calculate Repayments</b></button>
                     </form>
                 </div>
 
-                <div class="results-side">
-                    <img src="assets/images/illustration-empty.svg" alt="illustration-empty" draggable="false">
-                    <h2 align="center">Results shown here</h2>
+                <div class="results-side" id="results-side">
+                    <img src="assets/images/illustration-empty.svg" alt="illustration-empty" draggable="false" id="illustration-empty">
+                    <h2 align="center" id =>Results shown here</h2>
 
                     <p align="center">Complete the form and click “calculate repayments” to see what 
                     your monthly repayments would be.</p>
-
-                    <!--<h2>Your results</h2>
-
-                    <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-
-                    <h3>Your monthly repayments</h3>
-
-                    <h3>Total you'll repay over the term</h3>-->
                 </div>
             </div>
         </main>
 
-        <script src="myScript.js"/>
+        <script src="myScript.js"></script>
     </body>
 </html>

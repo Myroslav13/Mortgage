@@ -74,6 +74,10 @@ button img {
     padding-right: 10px;
 }
 
+button:hover {
+    background-color: #ebee97;
+}
+
 label, .main-side h2, p {
     color: lightslategray;
 }
@@ -104,10 +108,10 @@ input[type="text"] {
     position: absolute;
     margin-bottom: 10px;
     background-color: #e3f4fc;
-    border: 2px solid #838d8f;
+    border: 1px solid #838d8f;
     border-right: none;
     color: #333;
-    padding: 12px 14px;
+    padding: 10px 14px;
     font-size: 16px;
     height: 45px;
     width: 40px;
@@ -115,32 +119,42 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
+.input-container.focused::before {
+    background-color: #dbda32;
+    border: 1px solid #dbda32;
+    border-right: none;
+    color: #333;
+}
+
+.custom-input:hover {
+    border: 1px solid gray;
+}
+
 .custom-input {
     width: 100%;
     box-sizing: border-box;
     font-size: 14px;
-    /*border: 2px solid #dbda32;*/
-    border: 2px solid #838d8f;
+    border: 1px solid #838d8f;
     padding-left: 50px;
 }
 
-.custom-input:focus {
+.custom-input:focus, .custom-input-term:focus, .container-interest-rate:focus{
     outline: none
 }
 
-.input-container-term, .input-container-rate {
+.container-mortgage-term, .container-interest-rate {
     position: relative;
 }
 
-.input-container-term::after {
+.container-mortgage-term::after {
     content: "years";
 }
 
-.input-container-rate::after {
+.container-interest-rate::after {
     content: "%";
 }
 
-.input-container-term::after, .input-container-rate::after {
+.container-mortgage-term::after, .container-interest-rate::after {
     position: absolute;
     right: -35px;
     top: 10px;
@@ -152,13 +166,20 @@ input[type="text"] {
     height: 45px;
     box-sizing: border-box;
     border-radius: 0px 5px 5px 0px;
-    border: 2px solid #838d8f;
+    border: 1px solid #838d8f;
     border-left: none;
+}
+
+.container-mortgage-term.focused::after, .container-interest-rate.focused::after {
+    background-color: #dbda32;
+    border: 1px solid #dbda32;
+    border-left: none;
+    color: #333;
 }
 
 .custom-input-term, .custom-input-rate {
     height: 45px;
-    border: 2px solid #838d8f;
+    border: 1px solid #838d8f;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -171,7 +192,7 @@ input[type="text"] {
     display: flex;
     align-items: center;
     height: 45px;
-    border: 2px solid #838d8f;
+    border: 1px solid #838d8f;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px 10px;
@@ -190,3 +211,4 @@ input[type="text"] {
 .main-side-header h2 {
     font-size: medium;
 }
+
