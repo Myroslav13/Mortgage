@@ -17,7 +17,7 @@
                 <div class="main-side">
                     <div class="main-side-header">
                         <h1>Mortgage Calculator</h1>
-                        <h2><u>Clear All</u></h2>
+                        <h2 id="clear-all"><u>Clear All</u></h2>
                     </div>
 
                     <form>
@@ -26,6 +26,7 @@
                         <div class="input-container" id="container-mortgage-amount">
                             <input type="text" id="input-mortgage-amount" class="custom-input">
                         </div>
+                        <p class="warning warning-1" id="warning-1">This field is required</p>
 
                         <div class="mortgage-data">
                             <div>
@@ -33,6 +34,7 @@
 
                                 <div class="container-mortgage-term" id="container-mortgage-term">
                                     <input type="text" id="input-mortgage-term" class="custom-input-term">
+                                    <p class="warning warning-2" id="warning-2">This field is required</p>
                                 </div>
                             </div>
                             
@@ -41,6 +43,7 @@
                                 
                                 <div class="container-interest-rate" id="container-interest-rate">
                                     <input type="text" id="input-interest-rate" class="custom-input-rate">
+                                    <p class="warning warning-3" id="warning-3">This field is required</p>
                                 </div>
                             </div>
                         </div>
@@ -57,6 +60,7 @@
                                 <input type="radio" id="radio-interest-only" name="mortgage-type" value="interest-only">
                                 <label for="radio-interest-only"><b>Interest Only</b></label>
                             </div>
+                            <p class="warning warning-4" id="warning-4">This field is required</p>
                         </div>
 
                         <br>
@@ -66,7 +70,7 @@
 
                 <div class="results-side" id="results-side">
                     <img src="assets/images/illustration-empty.svg" alt="illustration-empty" draggable="false" id="illustration-empty">
-                    <h2 align="center" id =>Results shown here</h2>
+                    <h2 align="center">Results shown here</h2>
 
                     <p align="center">Complete the form and click “calculate repayments” to see what 
                     your monthly repayments would be.</p>

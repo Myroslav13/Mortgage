@@ -30,10 +30,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 0px 40px;
     background-color: #133040;
     color: white;
     border-radius: 0 15px 15px 50px;
+    box-sizing: border-box;
+    width: 83%;
 }
 
 .results-side h2 {
@@ -87,6 +89,8 @@ input[type="text"] {
     width: 100%;
     height: 45px;
     margin: 10px 0 20px 0;
+    color: #133040;
+    font-weight: bold;
 }
 
 .mortgage-data {
@@ -95,7 +99,7 @@ input[type="text"] {
 }
 
 .mortgage-data input[type="text"] {
-    width: 120%;
+    width: 100%;
 }
 
 .input-container {
@@ -126,6 +130,17 @@ input[type="text"] {
     color: #333;
 }
 
+.input-container.hover-effect::before {
+    border-color: #133040;
+}
+
+.input-container.warning-container::before {
+    background-color: red;
+    border: 1px solid red;
+    border-right: none;
+    color: white;
+}
+
 .custom-input:hover {
     border: 1px solid gray;
 }
@@ -138,7 +153,7 @@ input[type="text"] {
     padding-left: 50px;
 }
 
-.custom-input:focus, .custom-input-term:focus, .container-interest-rate:focus{
+.custom-input:focus, .custom-input-rate:focus, .custom-input-term:focus{
     outline: none
 }
 
@@ -156,7 +171,7 @@ input[type="text"] {
 
 .container-mortgage-term::after, .container-interest-rate::after {
     position: absolute;
-    right: -35px;
+    right: -6px;
     top: 10px;
     background-color: #e3f4fc;;
     color: #333;
@@ -177,6 +192,17 @@ input[type="text"] {
     color: #333;
 }
 
+.container-mortgage-term.hover-effect::after, .container-interest-rate.hover-effect::after {
+    border-color: #133040;
+}
+
+.container-mortgage-term.warning-container::after, .container-interest-rate.warning-container::after {
+    background-color: red;
+    border: 1px solid red;
+    border-left: none;
+    color: white;
+}
+
 .custom-input-term, .custom-input-rate {
     height: 45px;
     border: 1px solid #838d8f;
@@ -186,6 +212,10 @@ input[type="text"] {
 
 .main-side-header h1, .main-side-header h2 {
     margin-top: 0;
+}
+
+.main-side-header h2:hover {
+    color: #133040;
 }
 
 .radio-container {
@@ -212,3 +242,49 @@ input[type="text"] {
     font-size: medium;
 }
 
+.warning {
+    color: red !important;
+    display: none;
+    margin-top: -10px;
+}
+
+.warning-4 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.radio-container:hover {
+    border-color: #dbda32;
+}
+
+.mortgage-results {
+    border-top: 5px solid #dbda32;
+    border-radius: 10px;
+    background-color: #0e2431;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mortgage-price {
+    color: #dbda32;
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.mortgage-monthly {
+    color: white;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.mortgage-results-header h2 {
+    margin-top: 0px;
+}
+
+.mortgage-results h2 {
+    color: #838d8f;
+    font-size: medium;
+    margin-top: 10px;
+}
