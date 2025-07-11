@@ -150,7 +150,14 @@ function clearAllClick() {
         your monthly repayments would be.</p>`
 
     resultsSide.style.justifyContent = "center"
-    resultsSide.style.padding = "0px 40px"
+
+    let parametrs = "0px 40px"
+
+    if (window.innerWidth < 1024) {
+        parametrs = "40px 20px"
+    }
+    
+    resultsSide.style.padding = parametrs
 }
 
 // Listeners
